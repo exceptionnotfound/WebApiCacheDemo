@@ -18,9 +18,18 @@ namespace WebApiCacheDemo.Mvc.Controllers
         }
 
         [HttpGet]
+        [Route("Uncached")]
         [Route("")]
-        [Route("Index")]
-        public ActionResult Index()
+        [Route("~/")]
+        public ActionResult Uncached()
+        {
+            var model = _sampleClient.GetSampleDateAndNumberUncached();
+            return View(model);
+        }
+
+        [HttpGet]
+        [Route("Cached")]
+        public ActionResult Cached()
         {
             var model = _sampleClient.GetSampleDateAndNumber();
             return View(model);

@@ -11,11 +11,12 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Web API Cache Demo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Web API Cache Demo", "Uncached", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Uncached", "Uncached", "Home")</li>
+                    <li>@Html.ActionLink("Cached", "Cached", "Home")</li>
                 </ul>
             </div>
         </div>

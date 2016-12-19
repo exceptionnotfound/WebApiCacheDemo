@@ -10,5 +10,7 @@ namespace WebApiCacheDemo.Mvc.Clients.Interfaces
     public interface ISampleClient : IRestClient
     {
         DateNumberObject GetSampleDateAndNumber();
+
+        DateNumberObject GetSampleDateAndNumberUncached();
     }
 }

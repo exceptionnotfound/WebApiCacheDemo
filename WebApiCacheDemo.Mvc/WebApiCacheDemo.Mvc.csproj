@@ -72,6 +72,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -145,6 +146,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Caching\InMemoryCache.cs" />
     <Compile Include="Clients\Interfaces\ISampleClient.cs" />
     <Compile Include="Clients\SampleClient.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -190,7 +192,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Uncached.cshtml" />
+    <Content Include="Views\Home\Cached.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

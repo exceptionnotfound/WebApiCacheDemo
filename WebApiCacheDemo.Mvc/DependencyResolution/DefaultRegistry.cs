@@ -16,9 +16,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace WebApiCacheDemo.Mvc.DependencyResolution {
+    using Caching;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
-	
+
     public class DefaultRegistry : Registry {
         #region Constructors and Destructors
 
@@ -29,7 +30,9 @@ namespace WebApiCacheDemo.Mvc.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-            //For<IExample>().Use<Example>();
+
+            var inMemoryCache = new InMemoryCache();
+            For<ICacheService>().Use(inMemoryCache);
         }
 
         #endregion
