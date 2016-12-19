@@ -20,7 +20,7 @@ namespace WebApiCacheDemo.Mvc.Clients
 
         public DateNumberObject GetSampleDateAndNumber()
         {
-            return _cache.GetOrSet("SampleDateAndNumber", () => GetSampleDateAndNumberUncached(), 30); //Cached for 30 minutes
+            return _cache.GetOrSet("SampleDateAndNumber", () => GetSampleDateAndNumberUncached());
         }
 
         public DateNumberObject GetSampleDateAndNumberUncached()

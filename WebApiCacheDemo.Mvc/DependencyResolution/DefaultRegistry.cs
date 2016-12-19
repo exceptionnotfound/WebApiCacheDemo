@@ -30,7 +30,6 @@ namespace WebApiCacheDemo.Mvc.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-
             var inMemoryCache = new InMemoryCache();
             For<ICacheService>().Use(inMemoryCache);
         }
